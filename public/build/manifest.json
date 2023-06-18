@@ -1,0 +1,39 @@
+{
+  "resources/js/app.jsx": {
+    "file": "assets/app.5d1e54bf.js",
+    "src": "resources/js/app.jsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Hadits/Index.jsx",
+      "resources/js/Pages/Hadits/Search.jsx",
+      "resources/js/Pages/Hadits/Single.jsx",
+      "resources/js/Pages/index.jsx"
+    ]
+  },
+  "resources/js/Pages/Hadits/Index.jsx": {
+    "file": "assets/Index.27d401bc.js",
+    "src": "resources/js/Pages/Hadits/Index.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Hadits/Search.jsx": {
+    "file": "assets/Search.59443ee0.js",
+    "src": "resources/js/Pages/Hadits/Search.jsx",
+    "isDynamicEntry": true
+  },
+  "resources/js/Pages/Hadits/Single.jsx": {
+    "file": "assets/Single.1298700f.js",
+    "src": "resources/js/Pages/Hadits/Single.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/index.jsx": {
+    "file": "assets/index.935273ac.js",
+    "src": "resources/js/Pages/index.jsx",
+    "isDynamicEntry": true
+  }
+}
