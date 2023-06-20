@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HaditsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\QuranController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,6 @@ Route::get('/', HomeController::class);
 Route::get('/hadits', [HaditsController::class, 'index']);
 Route::get('/hadits/{kitab}/{number}', [HaditsController::class, 'single'] );
 Route::get('/hadits/search', [HaditsController::class, 'index'] );
+
+//Quran
+Route::get('/quran/{surat}/{ayat}', [QuranController::class, 'single'] );
