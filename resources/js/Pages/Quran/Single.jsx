@@ -1,6 +1,7 @@
 import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
 import React, { useEffect, useState } from "react";
+import QuranLayout from "./Layout";
 
 export default function QuranIndex() {
 
@@ -12,11 +13,11 @@ export default function QuranIndex() {
         { label: "Tafsir Ibnu Katsir", value: "tafsir-ibnu-katsir" },
         { label: "Tafsir Ringkas Kemenag", value: "tafsir-ringkas-kemenag" },
         { label: "Tafsir Lengkap Kemenag", value: "tafsir-lengkap-kemenag" },
-        { label: "Tafsir Al-Baghawi", value: "tafsir-albaghawi" },
-        { label: "Tafsir Al-Munir", value: "tafsir-almunir" },
-        { label: "Tafsir Al-Jazairy", value: "tafsir-aljazairy" },
-        { label: "Tafsir As-Saadi", value: "tafsir-assaadi" },
-        { label: "Tafsir As-Syarawi", value: "tafsir-assyarawi" },
+        // { label: "Tafsir Al-Baghawi", value: "tafsir-albaghawi" },
+        // { label: "Tafsir Al-Munir", value: "tafsir-almunir" },
+        // { label: "Tafsir Al-Jazairy", value: "tafsir-aljazairy" },
+        // { label: "Tafsir As-Saadi", value: "tafsir-assaadi" },
+        // { label: "Tafsir As-Syarawi", value: "tafsir-assyarawi" },
         { label: "Tafsir Al-Azhar", value: "tafsir-alazhar" },
     ]
     const parsedTafsir = JSON.parse(ayat.tafsir)
@@ -29,6 +30,8 @@ export default function QuranIndex() {
 
 
     return (
+        <QuranLayout>
+
         <section className="section" style={{ color: "#445767" }}>
             <div className="container block">
                 <h1 className="title block" >
@@ -61,5 +64,6 @@ export default function QuranIndex() {
             </div>
 
         </section>
+        </QuranLayout>
     )
 }
