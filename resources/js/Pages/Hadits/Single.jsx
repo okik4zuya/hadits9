@@ -64,11 +64,14 @@ export default function HaditsIndex() {
                         left: "0",
                         right:"0",
                         height: "80px",
-                        background:"#fff"
+                        background:"#fff",
+                        padding:"0 16px"
                      }}
                     >
                         <div className="has-text-center is-12">Lompat ke Hadits:</div>
-                        <form onSubmit={goToHadits} className="columns is-justify-content-center is-mobile is-align-items-center">
+                        <form onSubmit={goToHadits} className="columns is-justify-content-center is-mobile is-align-items-center"
+                        style={{ marginTop: "6px" }}
+                        >
                             <div class="select">
                                 <select defaultValue={kitab} value={kitab} onChange={e => setKitab(e.target.value)}>
                                     {kitabList.map((kitab, index) => (
