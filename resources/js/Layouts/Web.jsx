@@ -4,9 +4,17 @@ import React, { useEffect, useState } from 'react'
 export default function WebLayout({ children }) {
     const [isMenuExpanded, setIsMenuExpanded] = useState(false);
     return (
-        <div>
+        <div style={{ paddingTop:"50px" }}>
             <div>
-                <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+                <nav className="navbar is-transparent" role="navigation" aria-label="main navigation"
+                style={{ 
+                    position:"fixed",
+                    top: "0",
+                    left:"0",
+                    right:"0",
+                    height:"50px"
+                 }}
+                >
                     <div className="navbar-brand">
                         <a className="navbar-item" href="/">
                             <h1 className='has-text-weight-bold'>Tafaquh</h1>
