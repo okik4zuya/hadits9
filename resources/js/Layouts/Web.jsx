@@ -43,7 +43,7 @@ export default function WebLayout({ children }) {
                             </div>
 
                             <div className={`navbar-item has-dropdown is-hoverable ${isMenuExpanded && "is-active"}`}>
-                                <Link className="navbar-link" href="/hadits">
+                                <Link className="navbar-item" href="/hadits">
                                     Hadits
                                 </Link>
 
