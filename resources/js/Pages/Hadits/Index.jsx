@@ -72,7 +72,7 @@ export default function HaditsIndex() {
                         </thead>
                         <tbody>
                             {kitabList.map((kitab, index) => (
-                                <div key={index}>
+                                <>
                                     {results.filter(item => item.kitab === kitab.value).length !== 0 &&
                                         <tr>
                                             <td>{kitab.label}</td>
@@ -86,7 +86,7 @@ export default function HaditsIndex() {
                                             </td>
                                         </tr>
                                     }
-                                </div>
+                                </>
                             ))}
                         </tbody>
                     </table>
