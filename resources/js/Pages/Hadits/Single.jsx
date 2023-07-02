@@ -57,7 +57,16 @@ export default function HaditsIndex() {
                             Nomor Hadits: {hadits.number}
                         </h2>
                     </div>
-                    <div className="hadits__jump columns is-justify-content-center is-align-items-center">
+                    <div className="hadits__jump columns is-justify-content-center is-align-items-center"
+                    style={{ 
+                        position: "fixed",
+                        bottom: "-16px",
+                        left: "0",
+                        right:"0",
+                        height: "80px",
+                        background:"#fff"
+                     }}
+                    >
                         <div className="has-text-center is-12">Lompat ke Hadits:</div>
                         <form onSubmit={goToHadits} className="columns is-justify-content-center is-mobile is-align-items-center">
                             <div class="select">
