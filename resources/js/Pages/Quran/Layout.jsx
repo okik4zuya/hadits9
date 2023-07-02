@@ -33,29 +33,44 @@ export default function QuranLayout({ children }) {
     }
     return (
         <WebLayout>
-            <nav className="navbar columns is-align-items-center is-justify-content-center pt-2 pr-2 pl-2 is-transparent is-mobile"
-                style={{ background: "transparent", height: "80px", zIndex: "1" }}
-            >
 
-                <Select
-                    className="column is-8 is-mobile"
-                    defaultValue={suratOptions[0]}
-                    value={surat}
-                    options={suratOptions}
-                    isSearchable={true}
-                    onChange={value => handleSuratChange(value)}
-                />
-                <Select
-                    className="column is-4 is-mobile"
-                    defaultValue={{ label: ayat, value: ayat }}
-                    value={{ label: ayat, value: ayat }}
-                    options={ayatOptions(surat.value)}
-                    isSearchable={true}
-                    onChange={value => handleAyatChange(value)}
-                />
+                <div className="pl-2 pr-2"
+                    style={{
+                        position: "fixed",
+                        top: "40px",
+                        left: "0",
+                        right: "0",
+                        height: "70px",
+                        background: "#fff",
+                        zIndex: "10"
+                    }}>
 
-            </nav>
-            {children}
+                    <nav className="navbar columns is-align-items-center is-justify-content-center is-mobile"
+                        style={{ background: "#fff", height: "100%", zIndex: "1", marginTop: "0" }}
+                    >
+
+                        <Select
+                            className="column is-8 is-mobile"
+                            defaultValue={suratOptions[0]}
+                            value={surat}
+                            options={suratOptions}
+                            isSearchable={true}
+                            onChange={value => handleSuratChange(value)}
+                        />
+                        <Select
+                            className="column is-4 is-mobile"
+                            defaultValue={{ label: ayat, value: ayat }}
+                            value={{ label: ayat, value: ayat }}
+                            options={ayatOptions(surat.value)}
+                            isSearchable={true}
+                            onChange={value => handleAyatChange(value)}
+                        />
+
+                    </nav>
+                </div>
+                <div style={{ marginTop:"80px" }}>
+                {children}
+                </div>
         </WebLayout>
     )
 }
