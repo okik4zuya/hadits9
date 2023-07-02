@@ -15,7 +15,8 @@ class HaditsController extends Controller
     {
         $hadits = Hadits::where('kitab', $kitab)->where('number', $number)->first();
         return inertia('Hadits/Single', [
-            'hadits' => $hadits
+            'hadits' => $hadits,
+            
         ]);
     }
 

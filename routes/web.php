@@ -24,4 +24,6 @@ Route::get('/hadits/{kitab}/{number}', [HaditsController::class, 'single'] );
 Route::get('/hadits/search', [HaditsController::class, 'index'] );
 
 //Quran
+Route::get('/quran', [QuranController::class, 'index'] );
 Route::get('/quran/{surat}/{ayat}', [QuranController::class, 'single'] );
+Route::get('/quran/search', [QuranController::class, 'index'] );

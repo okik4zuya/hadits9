@@ -7,6 +7,7 @@ export default function QuranIndex() {
 
     const { ayat_content: ayat } = usePage().props;
     const [selectedTafsir, setSelectedTafsir] = useState("tafsir-jalalayn")
+    console.log(ayat)
 
     const tafsirList = [
         { label: "Tafsir Jalalain", value: "tafsir-jalalayn" },
@@ -32,7 +33,7 @@ export default function QuranIndex() {
     return (
         <QuranLayout>
 
-        <section className="section" style={{ color: "#445767" }}>
+        <section className="section" style={{ color: "#445767", paddingTop: "0" }}>
             <div className="container block">
                 <h1 className="title block" >
                     QS. {ayat.surat}: {ayat.ayat}

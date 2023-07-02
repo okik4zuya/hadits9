@@ -2,9 +2,9 @@ import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
 import React, { useState } from "react"
 import Select from 'react-select';
+import WebLayout from "../../Layouts/Web";
 
 export default function QuranLayout({ children }) {
-    console.log(usePage())
     const { ayat_content } = usePage().props
     const suratOptions = suratList.map(item => ({ value: item.no_surat, label: item.surat }))
     const ayatOptions = (noSurat) => {
@@ -18,7 +18,7 @@ export default function QuranLayout({ children }) {
         return arr
     }
 
-    const [surat, setSurat] = useState(suratOptions[ayat_content.no_surat])
+    const [surat, setSurat] = useState(suratOptions[ayat_content.no_surat - 1])
     const [ayat, setAyat] = useState(ayat_content.ayat)
 
     const handleSuratChange = (value) => {
@@ -32,9 +32,9 @@ export default function QuranLayout({ children }) {
         })
     }
     return (
-        <div>
+        <WebLayout>
             <nav className="navbar columns is-align-items-center is-justify-content-center pt-2 pr-2 pl-2 is-transparent is-mobile"
-                style={{ background: "transparent", height: "80px" }}
+                style={{ background: "transparent", height: "80px", zIndex: "1" }}
             >
 
                 <Select
@@ -56,7 +56,7 @@ export default function QuranLayout({ children }) {
 
             </nav>
             {children}
-        </div>
+        </WebLayout>
     )
 }
 

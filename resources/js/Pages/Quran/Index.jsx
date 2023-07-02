@@ -1,11 +1,16 @@
+
 import { Inertia } from "@inertiajs/inertia";
 import { usePage } from "@inertiajs/inertia-react";
 import React, { useState } from "react";
 import WebLayout from "../../Layouts/Web";
 
-export default function HaditsIndex() {
+export default function QuranIndex() {
 
     const { results } = usePage().props;
+    console.log(results)
+    const noSuratList = [...new Set(results.map(item=>item.no_surat))]
+    const suratList = [...new Set(results.map(item=>({no_surat:item.no_surat, surat: item.surat})))]
+    
 
     //define url params
     const q = window.location.search
@@ -14,21 +19,9 @@ export default function HaditsIndex() {
     //define state
     const [search, setSearch] = useState(urlParams.get('q'));
 
-    const kitabList = [
-        { label: "Shahih Bukhari", value: "bukhari" },
-        { label: "Shahih Muslim", value: "muslim" },
-        { label: "Muwatha' Malik", value: "malik" },
-        { label: "Musnad Ahmad", value: "ahmad" },
-        { label: "Sunan Tirmidzi", value: "tirmidzi" },
-        { label: "Sunan Abu Daud", value: "abudaud" },
-        { label: "Sunan Ibnu Majah", value: "ibnumajah" },
-        { label: "Sunan Nasa'i", value: "nasai" },
-        { label: "Sunan Darimi", value: "darimi" },
-    ]
-
     const onSubmitSearch = (e) => {
         e.preventDefault()
-        Inertia.visit(`/hadits/search?q=${search}`, {}, {
+        Inertia.visit(`/quran/search?q=${search}`, {}, {
             preserveState: true
         })
     }
@@ -38,7 +31,7 @@ export default function HaditsIndex() {
         <section className="section"style={{ color: "#445767" }}>
             <div className="container block">
                 <h1 className="title">
-                    Hadits 9 Imam
+                    Cari Ayat Al-Qur'an
                 </h1>
                 <p className="subtitle">
                     Cari dengan kata Bahasa Arab atau Indonesia. <br/>
@@ -51,7 +44,7 @@ export default function HaditsIndex() {
                         <input
                             className="input"
                             type="text"
-                            placeholder="Contoh: نية atau niat, lalu klik ENTER"
+                            placeholder="Contoh: كتب عليكم, lalu klik ENTER"
                             value={search}
                             onChange={e => setSearch(e.target.value)}
 
@@ -60,35 +53,36 @@ export default function HaditsIndex() {
                 </div>
                 <button type="submit" className="button is-primary">Cari</button>
             </form>
-            {results.length !== 0 ?
+            {results?.length !== 0 ?
                 <div className="box">
-                    <div className="block">Hasil pencarian untuk "{urlParams.get('q')}" <strong>({results.length} hasil)</strong></div>
+                    <div className="block">Hasil pencarian untuk "{urlParams.get('q')}" <strong>({results?.length} hasil)</strong></div>
                     <table className="table is-striped" style={{ width: "100%" }}>
                         <thead>
                             <tr>
-                                <th style={{ width: "25%" }}>Kitab</th>
-                                <th>Nomor</th>
+                                <th style={{ width: "40%" }}>Surat</th>
+                                <th style={{ width: "60%" }}>Ayat</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {kitabList.map((kitab, index) => (
-                                <div key={index}>
-                                    {results.filter(item => item.kitab === kitab.value).length !== 0 &&
+                            {noSuratList.map((noSurat, index) => (
+                                <>
+                                    {results?.filter(item => item.no_surat === noSurat).length !== 0 &&
                                         <tr>
-                                            <td>{kitab.label}</td>
+                                            <td>{suratList.filter(item=>item.no_surat === noSurat)[0].surat}</td>
                                             <td>
                                                 <div className="is-flex is-flex-flex-wrap" style={{ display: "flex", flexWrap: "wrap" }}>
 
-                                                    {results.filter(item => item.kitab === kitab.value).map((item, index) => (
-                                                        <a href={`/hadits/${item.kitab}/${item.number}`} className="ml-2 mr-2" style={{ lineHeight:"200%" }}>{item.number}</a>
+                                                    {results?.filter(item => item.no_surat === noSurat).map((item, index) => (
+                                                        <a href={`/quran/${noSurat}/${item.ayat}`} className="ml-2 mr-2" style={{ lineHeight:"200%" }}>{item.ayat}</a>
                                                     ))}
                                                 </div>
                                             </td>
                                         </tr>
                                     }
-                                </div>
+                                </>
                             ))}
                         </tbody>
+                        
                     </table>
 
                 </div>
