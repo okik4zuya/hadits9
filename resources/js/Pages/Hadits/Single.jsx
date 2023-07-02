@@ -78,7 +78,7 @@ export default function HaditsIndex() {
                         </form>
                     </div>
 
-                    <div className="box">
+                    <div className="box" style={{ marginBottom:"80px" }}>
                         <p className="subtitle block is-size-4 has-text-right" style={{ fontFamily: "'Scheherazade New', serif", lineHeight: "200%" }}>
                             {hadits.arabic}
                         </p>

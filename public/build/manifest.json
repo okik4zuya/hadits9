@@ -1,6 +1,6 @@
 {
   "resources/js/app.jsx": {
-    "file": "assets/app.5d6f74d5.js",
+    "file": "assets/app.ce7c5c91.js",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
@@ -15,16 +15,16 @@
     ]
   },
   "resources/js/Pages/Hadits/Index.jsx": {
-    "file": "assets/Index.6e64730e.js",
+    "file": "assets/Index.a492264d.js",
     "src": "resources/js/Pages/Hadits/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Web.2e8eb8ec.js"
+      "_Web.b545dd5e.js"
     ]
   },
-  "_Web.2e8eb8ec.js": {
-    "file": "assets/Web.2e8eb8ec.js",
+  "_Web.b545dd5e.js": {
+    "file": "assets/Web.b545dd5e.js",
     "imports": [
       "resources/js/app.jsx"
     ]
@@ -35,49 +35,49 @@
     "isDynamicEntry": true
   },
   "resources/js/Pages/Hadits/Single.jsx": {
-    "file": "assets/Single.5c4a20ba.js",
+    "file": "assets/Single.a952b8ac.js",
     "src": "resources/js/Pages/Hadits/Single.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Web.2e8eb8ec.js"
+      "_Web.b545dd5e.js"
     ]
   },
   "resources/js/Pages/Home/Index.jsx": {
-    "file": "assets/Index.7193cdb5.js",
+    "file": "assets/Index.59df6003.js",
     "src": "resources/js/Pages/Home/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Web.2e8eb8ec.js"
+      "_Web.b545dd5e.js"
     ]
   },
   "resources/js/Pages/Quran/Index.jsx": {
-    "file": "assets/Index.ed4f500b.js",
+    "file": "assets/Index.3c45f5e4.js",
     "src": "resources/js/Pages/Quran/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Web.2e8eb8ec.js"
+      "_Web.b545dd5e.js"
     ]
   },
   "resources/js/Pages/Quran/Layout.jsx": {
-    "file": "assets/Layout.0e2fe3cc.js",
+    "file": "assets/Layout.159aa5e0.js",
     "src": "resources/js/Pages/Quran/Layout.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_Web.2e8eb8ec.js"
+      "_Web.b545dd5e.js"
     ]
   },
   "resources/js/Pages/Quran/Single.jsx": {
-    "file": "assets/Single.5680e0fe.js",
+    "file": "assets/Single.99f235f6.js",
     "src": "resources/js/Pages/Quran/Single.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/Quran/Layout.jsx",
-      "_Web.2e8eb8ec.js"
+      "_Web.b545dd5e.js"
     ]
   },
   "resources/js/Pages/index.jsx": {
